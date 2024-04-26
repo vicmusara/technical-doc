@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url('images/bg.jpg');
+
+    /* Optionally, you can specify other background properties */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image horizontally and vertically */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+#navbar{
+    border: red 1px solid;
+}

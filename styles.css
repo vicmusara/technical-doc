@@ -1,16 +1,147 @@
+:root {
+    --primary-color: #7250f0; /* Define a variable named primary-color */
+    --secondary-color: rgba(253, 253, 253, 0.6);
+    --secondary-bg-color: rgba(253, 253, 253, 0.08);
+    /* Define a variable named secondary-color */
+    --background-color: rgba(0, 0, 0, 0.95);
+    --call-to-action-color: rgba(99, 120, 240, 0.85);
+    --bg-img: url('images/bg.jpg');
+}
+
 *{
     margin: 0;
     padding: 0;
 }
 
 body{
-    background-image: url('images/bg.jpg');
+    background-image: var(--bg-img);
 
     /* Optionally, you can specify other background properties */
     background-size: cover; /* Ensures the image covers the entire background */
     background-position: center; /* Centers the image horizontally and vertically */
     background-repeat: no-repeat; /* Prevents the image from repeating */
+    display: flex;
+    font-family: "Calibri Light", sans-serif;
+    justify-content: center;
+    width: 95vw;
+    margin: auto;
+
+
 }
 #navbar{
-    border: red 1px solid;
+
+    max-height: 100svh;
+    float: left;
+    background-color: var(--secondary-bg-color);
+    position: sticky;
+    top: 0;
+    width: 25vw;
+    text-align: center;
+    padding: 0;
+    z-index: 10;
+
+}
+
+.nav-list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+    padding-block: 2rem;
+    margin-top: 0;
+}
+
+.nav-list li{
+    color: var(--background-color) !important;
+    padding: 0.9rem 1.5rem;
+    margin-left: 1.5rem;
+    border-radius: 15px 0 0 15px;
+    background: var(--call-to-action-color);
+    box-shadow: 0 0 10px rgba(0.1, 0.1, 0.1, 0.9);
+    display: block;
+    width: 20vw;
+    font-size: 1.1em;
+
+}
+
+.nav-link{
+    display: block;
+    text-decoration: none;
+}
+
+.nav-list li:active{
+    background: var(--bg-img);
+    position: relative;
+}
+
+#main-doc{
+   position: relative;
+    width: 70vw;
+
+}
+
+section{
+
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+    margin: 20px 15px 20px 15px;
+    padding: 10px 10px 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: -10;
+    width: 60vw;
+    float: right;
+    line-height: 1.5em;
+}
+
+section a{
+    color: var(--call-to-action-color)
+}
+
+section
+
+a{
+    text-decoration: none;
+}
+
+header{
+    color: var(--primary-color);
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 0 0 0 15px;
+}
+
+#navbar header{
+    font-size: 2em;
+    text-align: right;
+    background: var(--background-color);
+    padding: 1rem 1rem 1rem 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+p{
+    padding: 0.5em 0.5em 0.5em 0;
+    font-size: 1.1rem;
+}
+
+section li{
+    margin-left: 20px;
+}
+
+code {
+    font-family: 'Courier New', monospace; /* Use a monospaced font */
+    background-color: var(--secondary-bg-color);
+    padding: 10px; /* Add padding around the code */
+    border-radius: 5px; /* Add rounded corners */
+    display: block; /* Ensure code blocks behave like block-level elements */ /* Add horizontal scroll bar if needed */
+
+}
+
+@media (max-width: 768px) {
+    #navbar, #main-doc {
+        width: 100%; /* Set the width of both divs to 100% */
+        float: none; /* Remove floating */
+    }
 }
